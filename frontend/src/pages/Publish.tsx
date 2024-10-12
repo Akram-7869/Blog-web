@@ -21,7 +21,7 @@ export const Publish = () => {
                     setDescription(e.target.value)
                 }} />
                 <button onClick={async () => {
-                    const response = await axios.post(`${BACKEND_URL}/api/v1/blog`, {
+                    await axios.post(`${BACKEND_URL}/api/v1/blog`, {
                         title,
                         content: description
                     }, {
